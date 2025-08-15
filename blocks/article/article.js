@@ -1,5 +1,5 @@
 export default async function decorate(block) {
-  const aempublishurl = 'https://p14733-e1160558.adobeaemcloud.com';
+  const aempublishurl = 'https://author-p14733-e1160558.adobeaemcloud.com';
   const aemauthorurl = 'https://author-p14733-e1160558.adobeaemcloud.com';
 
   const persistedquery = '/graphql/execute.json/ag-eds-site-4/ArticleByPath';
