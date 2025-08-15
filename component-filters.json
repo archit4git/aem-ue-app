@@ -8,7 +8,6 @@
   {
     "id": "section",
     "components": [
-      "article",
       "text",
       "image",
       "button",

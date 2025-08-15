@@ -28,7 +28,7 @@
                 "valueType": "string"
               },
               {
-                "component": "text-input",
+                "component": "text",
                 "name": "variation",
                 "value": "",
                 "label": "Variation",
