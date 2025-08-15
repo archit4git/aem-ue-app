@@ -27,10 +27,10 @@ export default async function decorate(block) {
   const itemId = `urn:aemconnection:${offerpath}/jcr:content/data/master`;
 
   block.innerHTML = `
-  <div class='offer-content' data-aue-resource=${itemId} data-aue-label="offer content fragment" data-aue-type="reference" data-aue-filter="cf">
+  <div class='offer-content' data-aue-resource=${itemId} data-aue-label="Offer Content Fragment" data-aue-type="reference" data-aue-filter="cf">
       <div class='offer-left'>
-          <h4 data-aue-prop="title" data-aue-label="title" data-aue-type="text" class='title'>${cfReq.title}</h4>
-          <p data-aue-prop="content" data-aue-label="content" data-aue-type="text" class='content'>${cfReq.content.plaintext}</p>
+          <h4 data-aue-prop="title" data-aue-label="Title" data-aue-type="text" class='title'>${cfReq.title}</h4>
+          <p data-aue-prop="content" data-aue-label="Content" data-aue-type="text" class='content'>${cfReq.content.plaintext}</p>
       </div>
       <div class='offer-right'>
          <a href="${cfReq.ctaUrl}" data-aue-prop="callToAction" data-aue-label="Call to Action" data-aue-type="text" class='button secondary'>${cfReq.callToAction}</a>
