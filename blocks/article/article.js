@@ -4,7 +4,7 @@ export default async function decorate(block) {
 
   const persistedquery = '/graphql/execute.json/universal-editor-standard-site/ArticleByPath';
   const articlepath = block.querySelector(':scope div:nth-child(1) > div a').innerHTML.trim();
-  let variationname = block.querySelector(':scope div:nth-child(2) > div').innerHTML.trim();
+  let variationname = block.querySelector(':scope div:nth-child(2) > div p').innerHTML.trim();
   if (!variationname) {
     variationname = 'main';
   }
@@ -29,8 +29,8 @@ export default async function decorate(block) {
   block.innerHTML = `
   <div class='article-content' data-aue-resource=${itemId} data-aue-label="article content fragment" data-aue-type="reference" data-aue-filter="cf">
       <div>
-          <h4 data-aue-prop="headline" data-aue-label="headline" data-aue-type="text" class='headline'>${cfReq.title}</h4>
-          <p data-aue-prop="detail" data-aue-label="detail" data-aue-type="richtext" class='detail'>${cfReq.content.plaintext}</p>
+          <h4 data-aue-prop="title" data-aue-label="title" data-aue-type="text" class='title'>${cfReq.title}</h4>
+          <p data-aue-prop="content" data-aue-label="content" data-aue-type="richtext" class='content'>${cfReq.content.plaintext}</p>
       </div>
   </div>
 `;
