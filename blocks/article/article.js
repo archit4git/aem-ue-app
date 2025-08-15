@@ -2,7 +2,7 @@ export default async function decorate(block) {
   const aempublishurl = 'https://p14733-e1160558.adobeaemcloud.com';
   const aemauthorurl = 'https://author-p14733-e1160558.adobeaemcloud.com';
 
-  const persistedquery = '/graphql/execute.json/universal-editor-standard-site/ArticleByPath';
+  const persistedquery = '/graphql/execute.json/ag-eds-site-4/ArticleByPath';
   const articlepath = block.querySelector(':scope div:nth-child(1) > div a').innerHTML.trim();
   let variationname = block.querySelector(':scope div:nth-child(2) > div p').innerHTML.trim();
   if (!variationname) {
