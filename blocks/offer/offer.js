@@ -19,7 +19,7 @@ export default async function decorate(block) {
     .then((contentfragment) => {
       let offer = '';
       if (contentfragment.data) {
-        offer = contentfragment.data.offerByPath.item;
+        offer = contentfragment.data.offerCFModelByPath.item;
       }
       return offer;
     });
