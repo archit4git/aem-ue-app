@@ -1,38 +1,44 @@
 {
-    "definitions": [
-        {
-            "title": "Offer",
-            "id": "offer",
-            "plugins": {
-              "xwalk": {
-                "page": {
-                  "resourceType": "core/franklin/components/block/v1/block",
-                  "template": {
-                    "name": "Offer",
-                    "model": "offer"
-                  }
-                }
-              }
+  "definitions": [
+    {
+      "title": "Offer",
+      "id": "offer",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Offer",
+              "model": "offer"
             }
+          }
         }
-    ],
-    "models": [
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "offer",
+      "fields": [
         {
-            "id": "offer",
-            "fields": [
-              {
-                "component": "aem-content-fragment",
-                "name": "offerpath",
-                "value": "",
-                "label": "Offer Content Fragment path",
-                "valueType": "string",
-                "variationName": "contentFragmentVariation",
-                "validation": {
-                    "rootPath": "/content/dam/ag-eds-site-4"
-                }
-              }
-            ]
+          "component": "aem-content-fragment",
+          "name": "offerpath",
+          "value": "",
+          "label": "Offer Content Fragment path",
+          "valueType": "string",
+          "validation": {
+            "rootPath": "/content/dam/ag-eds-site-4"
+          }
+        },
+        {
+          "component": "text",
+          "name": "variation",
+          "value": "",
+          "label": "Variation",
+          "valueType": "string"
         }
-    ],
-    "filters": []
-  }
+      ]
+    }
+  ],
+  "filters": []
+}

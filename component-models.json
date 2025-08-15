@@ -243,10 +243,16 @@
         "value": "",
         "label": "Offer Content Fragment path",
         "valueType": "string",
-        "variationName": "contentFragmentVariation",
         "validation": {
           "rootPath": "/content/dam/ag-eds-site-4"
         }
+      },
+      {
+        "component": "text",
+        "name": "variation",
+        "value": "",
+        "label": "Variation",
+        "valueType": "string"
       }
     ]
   }

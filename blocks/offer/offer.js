@@ -3,10 +3,10 @@ export default async function decorate(block) {
   const aemauthorurl = 'https://author-p14733-e1160558.adobeaemcloud.com';
   const persistedquery = '/graphql/execute.json/ag-eds-site-4/OfferByPath';
   const offerpath = block.querySelector(':scope div:nth-child(1) > div a').innerHTML.trim();
-  let variationname = 'main';
-  const variationElem = block.querySelector(':scope div:nth-child(2) > div > p');
-  if (variationElem && variationElem.innerHTML) {
-    variationname = variationElem.innerHTML.trim();
+  let variationname = block.querySelector(':scope div:nth-child(2) > div > p').innerHTML.trim();
+
+  if (!variationname) {
+    variationname = 'main';
   }
 
   const url = window.location && window.location.origin && window.location.origin.includes('author')
