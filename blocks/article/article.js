@@ -30,7 +30,7 @@ export default async function decorate(block) {
   <div class='article-content' data-aue-resource=${itemId} data-aue-label="Article Content Fragment" data-aue-type="reference" data-aue-filter="cf">
       <div>
           <h4 data-aue-prop="title" data-aue-label="title" data-aue-type="text" class='title'>${cfReq.title}</h4>
-          <p data-aue-prop="content" data-aue-label="content" data-aue-type="richtext" class='content'>${cfReq.content.plaintext}</p>
+          <p data-aue-prop="content" data-aue-label="content" data-aue-type="text" class='content'>${cfReq.content.plaintext}</p>
       </div>
   </div>
 `;
