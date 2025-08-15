@@ -142,25 +142,6 @@
     ]
   },
   {
-    "id": "article",
-    "fields": [
-      {
-        "component": "aem-content-fragment",
-        "name": "articlepath",
-        "value": "",
-        "label": "Article Content Fragment path",
-        "valueType": "string"
-      },
-      {
-        "component": "text-input",
-        "name": "variation",
-        "value": "",
-        "label": "Variation",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "card",
     "fields": [
       {
@@ -230,6 +211,25 @@
         "name": "text",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "article",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "articlepath",
+        "value": "",
+        "label": "Article Content Fragment path",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "variation",
+        "value": "",
+        "label": "Variation",
         "valueType": "string"
       }
     ]
