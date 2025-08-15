@@ -214,5 +214,24 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "article",
+    "fields": [
+      {
+        "component": "aem-content-fragment",
+        "name": "articlepath",
+        "value": "",
+        "label": "Article Content Fragment path",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "variation",
+        "value": "",
+        "label": "Variation",
+        "valueType": "string"
+      }
+    ]
   }
 ]
