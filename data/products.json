@@ -1,0 +1,12 @@
+{
+  "data": [
+    { "sku": "BRW-100", "name": "Ceramic Cone Dripper", "category": "brewers", "price": 34, "color": "#0e5a57", "blurb": "Single-cup dripper with a stepped interior for even extraction." },
+    { "sku": "BRW-210", "name": "Glass Carafe Brewer", "category": "brewers", "price": 78, "color": "#3b6e8f", "blurb": "Four-cup pour-over set with a heat-safe carafe and steel stand." },
+    { "sku": "GRN-300", "name": "Hand Burr Grinder", "category": "grinders", "price": 96, "color": "#8a5a44", "blurb": "Forty-click steel burr grinder that fits in a jacket pocket." },
+    { "sku": "GRN-420", "name": "Electric Flat Burr Grinder", "category": "grinders", "price": 249, "color": "#4a5560", "blurb": "Quiet flat burrs with a stepless dial and low-retention chute." },
+    { "sku": "KTL-500", "name": "Gooseneck Kettle", "category": "kettles", "price": 69, "color": "#5d7a4f", "blurb": "Fine-spout kettle with a thermometer in the lid." },
+    { "sku": "BNS-610", "name": "Washed Ethiopia, 340g", "category": "beans", "price": 19, "color": "#a2503a", "blurb": "Bright and floral, roasted light the week you order." },
+    { "sku": "BNS-620", "name": "Huila Colombia, 340g", "category": "beans", "price": 17, "color": "#7a6a2e", "blurb": "Caramel, red apple, and a clean finish." },
+    { "sku": "ACC-700", "name": "Pour-over Scale", "category": "accessories", "price": 42, "color": "#2f4858", "blurb": "0.1 g resolution with a built-in brew timer." }
+  ]
+}
