@@ -12,8 +12,10 @@ import {
   loadCSS,
 } from './aem.js';
 
-import { initMartech } from './martech.js';
+/* 
+import { initMartech, isDebug } from './martech.js';
 import { collectSlots, startPage } from './decisioning.js';
+*/
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -99,10 +101,10 @@ async function loadEager(doc) {
   if (main) {
     decorateMain(main);
     document.body.classList.add('appear');
-
+/*
     initMartech();
     startPage(collectSlots(main));
-
+*/
     await loadSection(main.querySelector('.section'), waitForFirstImage);
   }
 
@@ -133,6 +135,9 @@ async function loadLazy(doc) {
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
+  /*
+  if (isDebug()) import('./debug.js').then((m) => m.default());
+  */
 }
 
 /**
