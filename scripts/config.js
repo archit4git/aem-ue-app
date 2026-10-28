@@ -31,7 +31,7 @@ const CONFIG = {
     offer: {
       scope: '', // REPLACE with the encoded decision scope for the hero placement
       surface: 'offer-zone-1',
-    }
+    },
   },
 };
 
