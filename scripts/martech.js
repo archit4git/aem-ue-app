@@ -60,8 +60,8 @@ export function initMartech() {
     defaultConsent: 'in', // POC only. Wire to your CMP before production.
     thirdPartyCookiesEnabled: false,
     clickCollectionEnabled: false,
-  }).then(() => console.log('configured', { datastreamId: CONFIG.datastreamId }))
-    .catch((e) => console.error('error', { message: `configure failed: ${e.message}` }));
+  }).then(() => log('configured', { datastreamId: CONFIG.datastreamId }))
+    .catch((e) => log('error', { message: `configure failed: ${e.message}` }));
 
   return configured;
 }
