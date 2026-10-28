@@ -1,3 +1,7 @@
+"rules": {
+     "import/prefer-default-export": "off"
+}
+
 /**
  * Single place to wire this site to your Adobe org.
  * Everything marked REPLACE must be filled in before decisions come back.
