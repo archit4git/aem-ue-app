@@ -12,7 +12,7 @@ import {
   loadCSS,
 } from './aem.js';
 
-import { initMartech, isDebug } from './martech.js';
+import { initMartech } from './martech.js';
 import { collectSlots, startPage } from './decisioning.js';
 
 /**
