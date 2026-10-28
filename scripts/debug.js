@@ -38,7 +38,7 @@ export default function mountDebugPanel() {
     li.querySelector('pre').textContent = JSON.stringify(body, null, 2);
     list.prepend(li);
   };
-  (window.__pocLog || []).forEach(add);
+  (window.pocLog || []).forEach(add);
   window.addEventListener('poc:log', (ev) => add(ev.detail));
 
   panel.querySelector('button').addEventListener('click', () => {

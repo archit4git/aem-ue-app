@@ -1,4 +1,4 @@
-import { CONFIG } from './config.js';
+import CONFIG from './config.js';
 import { sendEvent } from './martech.js';
 
 let productsPromise;
@@ -58,8 +58,13 @@ export function trackCommerce(eventType, items, extraCommerce = {}) {
 export function addToCart(product, qty = 1) {
   const cart = readCart();
   const existing = cart.find((i) => i.sku === product.sku);
-  if (existing) existing.qty += qty;
-  else cart.push({ sku: product.sku, name: product.name, price: product.price, qty });
+  if (existing) {
+    existing.qty += qty;
+  } else {
+    cart.push({
+      sku: product.sku, name: product.name, price: product.price, qty,
+    });
+  }
   writeCart(cart);
   trackCommerce('commerce.productListAdds', [{ ...product, qty }]);
 }
