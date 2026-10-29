@@ -17,7 +17,11 @@
       "columns",
       "fragment",
       "offer",
-      "article"
+      "article",
+      "offer-banner",
+      "product-grid",
+      "product-detail",
+      "cart"      
     ]
   },
   {

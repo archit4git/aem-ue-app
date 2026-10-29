@@ -255,5 +255,60 @@
         "valueType": "string"
       }
     ]
-  }
+  },
+  {
+    "id": "offer-banner",
+    "fields": [
+      {
+        "component": "select",
+        "name": "slot",
+        "label": "Decisioning slot",
+        "valueType": "string",
+        "value": "hero",
+        "options": [
+          {
+            "name": "Hero (home page)",
+            "value": "hero"
+          },
+          {
+            "name": "Cart",
+            "value": "cart"
+          }
+        ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "badge",
+        "label": "Fallback badge",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "headline",
+        "label": "Fallback headline",
+        "value": ""
+      },
+      {
+        "component": "text-area",
+        "valueType": "string",
+        "name": "subhead",
+        "label": "Fallback subhead",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cta",
+        "label": "Fallback button label",
+        "value": ""
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Fallback button link"
+      }
+    ]
+  }  
 ]
