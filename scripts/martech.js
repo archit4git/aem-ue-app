@@ -1,4 +1,4 @@
-import CONFIG from './config.js';
+import { CONFIG } from './config.js';
 
 let configured;
 const params = new URLSearchParams(window.location.search);
@@ -24,7 +24,7 @@ export const setDemoEmail = (email) => {
 /** Everything that happens is mirrored to a log the debug panel can replay. */
 export function log(type, detail = {}) {
   const entry = { type, at: new Date().toISOString(), ...detail };
-  (window.pocLog = window.pocLog || []).push(entry);
+  (window.__pocLog = window.__pocLog || []).push(entry);
   window.dispatchEvent(new CustomEvent('poc:log', { detail: entry }));
 }
 
@@ -33,8 +33,8 @@ function installAlloyStub() {
   ((n, o) => {
     o.forEach((name) => {
       if (n[name]) return;
-      n.alloyNS = n.alloyNS || [];
-      n.alloyNS.push(name);
+      n.__alloyNS = n.__alloyNS || [];
+      n.__alloyNS.push(name);
       n[name] = (...args) => new Promise((resolve, reject) => {
         n[name].q.push([resolve, reject, args]);
       });

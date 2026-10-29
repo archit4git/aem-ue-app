@@ -1,4 +1,4 @@
-import CONFIG from './config.js';
+import { CONFIG } from './config.js';
 import { sendEvent } from './martech.js';
 
 const state = { pending: null };
@@ -9,10 +9,11 @@ export const surfaceFor = (fragment, loc = window.location) => `web://${loc.host
 
 /** Read the slot name from an (undecorated) offer-banner block: row "slot | hero". */
 export function slotOfBlock(block) {
-  const slotRow = [...block.querySelectorAll(':scope > div')]
-    .map((row) => [...row.children].map((c) => c.textContent.trim()))
-    .find(([k]) => k?.toLowerCase() === 'slot');
-  return slotRow ? slotRow[1] : null;
+  for (const row of block.querySelectorAll(':scope > div')) {
+    const [k, v] = [...row.children].map((c) => c.textContent.trim());
+    if (k?.toLowerCase() === 'slot') return v;
+  }
+  return null;
 }
 
 export const collectSlots = (root) => [...root.querySelectorAll('.offer-banner')]
@@ -85,21 +86,14 @@ export async function getOffer(slotName) {
 
   const { p, via } = hits[0];
   const item = p.items[0];
-  return {
-    proposition: p, item, via, ...normalizeItem(item),
-  };
+  return { proposition: p, item, via, ...normalizeItem(item) };
 }
 
 const ref = (p) => ({ id: p.id, scope: p.scope, scopeDetails: p.scopeDetails });
 
 export const buildDisplayXdm = (proposition) => ({
   eventType: 'decisioning.propositionDisplay',
-  _experience: {
-    decisioning: {
-      propositions: [ref(proposition)],
-      propositionEventType: { display: 1 },
-    },
-  },
+  _experience: { decisioning: { propositions: [ref(proposition)], propositionEventType: { display: 1 } } },
 });
 
 export const buildInteractXdm = (proposition, item, label = 'cta') => ({

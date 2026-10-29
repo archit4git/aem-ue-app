@@ -1,0 +1,7 @@
+.cart { font-family: var(--poc-font, system-ui, sans-serif); max-width: 720px; }
+.cart table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+.cart th, .cart td { padding: 12px 8px; text-align: left; border-bottom: 1px solid var(--poc-line, #d3dcd9); }
+.cart input[type="number"] { width: 4rem; padding: 6px; font: inherit; }
+.cart .poc-button[data-variant="quiet"] { padding: 6px 10px; font-size: .85rem; }
+.cart .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.cart-confirm { padding: 16px; background: var(--poc-chalk, #f4f7f6); border-left: 4px solid var(--poc-teal, #0e5a57); }

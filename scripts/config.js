@@ -2,7 +2,7 @@
  * Single place to wire this site to your Adobe org.
  * Everything marked REPLACE must be filled in before decisions come back.
  */
-const CONFIG = {
+export const CONFIG = {
   // Experience Platform datastream (AEP Edge + Journey Optimizer services enabled)
   datastreamId: 'e01294ec-f74a-43bb-93d6-2a2382c1ac34',
   orgId: 'D15D15F354F647770A4C98A4@AdobeOrg',
@@ -28,11 +28,13 @@ const CONFIG = {
    * If both return something, the decision-policy scope wins.
    */
   slots: {
-    offer: {
+    hero: {
       scope: '', // REPLACE with the encoded decision scope for the hero placement
-      surface: 'offer-zone-1',
+      surface: 'hero-banner',
+    },
+    cart: {
+      scope: '', // REPLACE with a second decision scope if you want a cart-page offer
+      surface: 'cart-offer',
     },
   },
 };
-
-export default CONFIG;
