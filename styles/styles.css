@@ -38,14 +38,13 @@
 
   /* nav height */
   --nav-height: 64px;
-
   --poc-ink: #14232b;
   --poc-chalk: #f4f7f6;
   --poc-steel: #5b6b73;
   --poc-teal: #0e5a57;
   --poc-citrus: #f2b42f;
   --poc-line: #d3dcd9;
-  --poc-font: "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;    
+  --poc-font: "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
 .poc-button {
@@ -59,9 +58,20 @@
   cursor: pointer;
 }
 
-.poc-button:hover { background: #ffc94d; }
-.poc-button:focus-visible { outline: 3px solid var(--poc-ink); outline-offset: 2px; }
-.poc-button[data-variant="quiet"] { background: transparent; color: var(--poc-ink); box-shadow: inset 0 0 0 2px var(--poc-ink); }
+.poc-button:hover {
+  background: #ffc94d;
+}
+
+.poc-button:focus-visible {
+  outline: 3px solid var(--poc-ink);
+  outline-offset: 2px;
+}
+
+.poc-button[data-variant="quiet"] {
+  background: transparent;
+  color: var(--poc-ink);
+  box-shadow: inset 0 0 0 2px var(--poc-ink);
+}
 
 /* fallback fonts */
 @font-face {
@@ -76,7 +86,7 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   :root {
     /* body sizes */
     --body-font-size-m: 18px;
@@ -135,12 +145,29 @@ h6 {
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
 
 p,
 dl,
@@ -165,7 +192,7 @@ pre {
   white-space: pre;
 }
 
-main > div {
+main>div {
   margin: 40px 16px;
 }
 
@@ -251,22 +278,22 @@ main img {
 }
 
 /* sections */
-main > .section {
+main>.section {
   margin: 40px 0;
 }
 
-main > .section > div {
+main>.section>div {
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
 }
 
-main > .section:first-of-type {
+main>.section:first-of-type {
   margin-top: 0;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
+@media (width >=900px) {
+  main>.section>div {
     padding: 0 32px;
   }
 }

@@ -4,16 +4,25 @@
   grid-template-columns: 1fr;
   align-items: center;
   gap: 24px;
-  min-height: 360px; /* reserve space so a late offer causes no layout shift */
+  min-height: 360px;
+  
+  /* reserve space so a late offer causes no layout shift */
   padding: 32px 24px;
   background: var(--poc-ink, #14232b);
   color: var(--poc-chalk, #f4f7f6);
   font-family: var(--poc-font, system-ui, sans-serif);
 }
 
-.offer-banner.is-loading { opacity: .6; }
+.offer-banner.is-loading {
+  opacity: .6;
+}
 
-.offer-banner-text { display: grid; gap: 16px; justify-items: start; max-width: 34rem; }
+.offer-banner-text {
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+  max-width: 34rem;
+}
 
 .offer-banner h2 {
   margin: 0;
@@ -23,7 +32,12 @@
   font-weight: 800;
 }
 
-.offer-banner-subhead { margin: 0; font-size: 1.125rem; line-height: 1.5; color: #c9d6d2; }
+.offer-banner-subhead {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: #c9d6d2;
+}
 
 .offer-banner-badge {
   margin: 0;
@@ -34,10 +48,26 @@
   font-size: .9rem;
 }
 
-.offer-banner-art { display: none; }
-.offer-banner-art img { width: 100%; height: auto; display: block; }
+.offer-banner-art {
+  display: none;
+}
 
-@media (width >= 800px) {
-  .offer-banner { grid-template-columns: 1.3fr 1fr; padding: 48px 56px; gap: 56px; }
-  .offer-banner-art { display: block; max-width: 320px; justify-self: end; }
+.offer-banner-art img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (width >=800px) {
+  .offer-banner {
+    grid-template-columns: 1.3fr 1fr;
+    padding: 48px 56px;
+    gap: 56px;
+  }
+
+  .offer-banner-art {
+    display: block;
+    max-width: 320px;
+    justify-self: end;
+  }
 }

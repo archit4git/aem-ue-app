@@ -4,11 +4,32 @@
   font-family: var(--poc-font, system-ui, sans-serif);
 }
 
-.product-detail img { width: 100%; max-width: 480px; height: auto; }
-.product-detail h1 { margin: 0 0 8px; letter-spacing: -0.02em; }
-.product-detail-price { margin: 0 0 16px; font-size: 1.5rem; font-weight: 700; }
-.product-detail-blurb { margin: 0 0 24px; max-width: 36rem; line-height: 1.6; }
+.product-detail img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+}
 
-@media (width >= 800px) {
-  .product-detail { grid-template-columns: 480px 1fr; align-items: start; }
+.product-detail h1 {
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.product-detail-price {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.product-detail-blurb {
+  margin: 0 0 24px;
+  max-width: 36rem;
+  line-height: 1.6;
+}
+
+@media (width >=800px) {
+  .product-detail {
+    grid-template-columns: 480px 1fr;
+    align-items: start;
+  }
 }
