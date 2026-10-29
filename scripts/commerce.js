@@ -59,6 +59,7 @@ export function addToCart(product, qty = 1) {
   const cart = readCart();
   const existing = cart.find((i) => i.sku === product.sku);
   if (existing) existing.qty += qty;
+  // eslint-disable-next-line object-curly-newline
   else cart.push({ sku: product.sku, name: product.name, price: product.price, qty });
   writeCart(cart);
   trackCommerce('commerce.productListAdds', [{ ...product, qty }]);

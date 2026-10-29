@@ -71,7 +71,7 @@ async function render(block, copy, product) {
 
 export default async function decorate(block) {
   const authored = readAuthored(block);
-  const slot = authored.slot;
+  const { slot } = authored;
   block.dataset.slot = slot;
   block.classList.add('is-loading');
   block.replaceChildren();

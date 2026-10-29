@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import { CONFIG } from './config.js';
 
 let configured;

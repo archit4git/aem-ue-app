@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /**
  * Single place to wire this site to your Adobe org.
  * Everything marked REPLACE must be filled in before decisions come back.

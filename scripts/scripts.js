@@ -99,10 +99,10 @@ async function loadEager(doc) {
   if (main) {
     decorateMain(main);
     document.body.classList.add('appear');
-    
+
     initMartech();
     startPage(collectSlots(main));
-    
+
     await loadSection(main.querySelector('.section'), waitForFirstImage);
   }
 

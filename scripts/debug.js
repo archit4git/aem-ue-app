@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import { getDemoEmail, setDemoEmail } from './martech.js';
 
 /** ?debug=1 turns this on (persisted). ?debug=0 turns it off. */

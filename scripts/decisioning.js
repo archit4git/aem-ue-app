@@ -9,11 +9,13 @@ export const surfaceFor = (fragment, loc = window.location) => `web://${loc.host
 
 /** Read the slot name from an (undecorated) offer-banner block: row "slot | hero". */
 export function slotOfBlock(block) {
-  for (const row of block.querySelectorAll(':scope > div')) {
-    const [k, v] = [...row.children].map((c) => c.textContent.trim());
-    if (k?.toLowerCase() === 'slot') return v;
-  }
-  return null;
+  const match = [...block.querySelectorAll(':scope > div')]
+    .map((row) => {
+      const [k, v] = [...row.children].map((c) => c.textContent.trim());
+      return { key: k?.toLowerCase(), value: v };
+    })
+    .find(({ key }) => key === 'slot');
+  return match ? match.value : null;
 }
 
 export const collectSlots = (root) => [...root.querySelectorAll('.offer-banner')]
@@ -86,14 +88,18 @@ export async function getOffer(slotName) {
 
   const { p, via } = hits[0];
   const item = p.items[0];
-  return { proposition: p, item, via, ...normalizeItem(item) };
+  return {
+    proposition: p, item, via, ...normalizeItem(item),
+  };
 }
 
 const ref = (p) => ({ id: p.id, scope: p.scope, scopeDetails: p.scopeDetails });
 
 export const buildDisplayXdm = (proposition) => ({
   eventType: 'decisioning.propositionDisplay',
-  _experience: { decisioning: { propositions: [ref(proposition)], propositionEventType: { display: 1 } } },
+  _experience: {
+    decisioning: { propositions: [ref(proposition)], propositionEventType: { display: 1 } },
+  },
 });
 
 export const buildInteractXdm = (proposition, item, label = 'cta') => ({
